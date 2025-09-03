@@ -18,7 +18,7 @@ for i in $(seq 1 500); do
 EOF
 )
 
-  # Make the gRPC call using grpcurl and capture response
+  # Make the gRPC call using grpcurl
   grpcurl -plaintext \
     -proto "$PROTO_FILE" \
     -d "$PAYLOAD" \

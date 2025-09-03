@@ -38,4 +38,4 @@ cd muzzapp
 Start the Go service together with **MySQL**, **Redis**, and **Adminer**:
 
 ```bash
-make up
+make start-services
