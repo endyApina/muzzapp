@@ -19,7 +19,6 @@ import (
 
 func main() {
 	cfg := config.Load()
-	log.Println("loaded configuration:", cfg)
 
 	db, err := database.Init(cfg)
 	if err != nil {
