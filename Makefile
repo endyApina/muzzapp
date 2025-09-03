@@ -4,9 +4,6 @@ MOCKERY=github.com/vektra/mockery/v2@v2.52.2
 
 .PHONY: all help build start-services stop-services restart clean test generate-protos generate-mocks
 
-# Default .env file
-ENV_FILE ?= .env
-
 help:
 	@echo "Available commands:"
 	@echo "  make build              Build Go binary and Docker image"
@@ -28,7 +25,7 @@ build:
 # Start services
 start-services: generate-protos generate-mocks test build
 	@echo "Starting all services..."
-	docker-compose --env-file $(ENV_FILE) up
+	docker-compose up
 
 # Stop services
 stop-services:
