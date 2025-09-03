@@ -6,7 +6,7 @@ import (
 
 	redis_cache "github.com/endyapina/muzzapp/internal/redis"
 	"github.com/endyapina/muzzapp/internal/repository"
-	pb "github.com/endyapina/muzzapp/proto/gen/github.com/muzzapp/backend-interview-task"
+	pb "github.com/endyapina/muzzapp/proto/gen/muzzapp/proto"
 	"github.com/redis/go-redis/v9"
 )
 

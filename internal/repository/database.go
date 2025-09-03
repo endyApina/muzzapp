@@ -10,7 +10,7 @@ import (
 	"github.com/endyapina/muzzapp/internal/config"
 	"github.com/endyapina/muzzapp/internal/models"
 
-	pb "github.com/endyapina/muzzapp/proto/gen/github.com/muzzapp/backend-interview-task"
+	pb "github.com/endyapina/muzzapp/proto/gen/muzzapp/proto"
 
 	"gorm.io/gorm"
 )

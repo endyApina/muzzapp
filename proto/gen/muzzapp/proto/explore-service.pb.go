@@ -4,7 +4,7 @@
 // 	protoc        v6.32.0
 // source: proto/explore-service.proto
 
-package backend_interview_task
+package proto
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -399,7 +399,7 @@ const file_proto_explore_service_proto_rawDesc = "" +
 	"\fListLikedYou\x12\x1c.explore.ListLikedYouRequest\x1a\x1d.explore.ListLikedYouResponse\x12N\n" +
 	"\x0fListNewLikedYou\x12\x1c.explore.ListLikedYouRequest\x1a\x1d.explore.ListLikedYouResponse\x12N\n" +
 	"\rCountLikedYou\x12\x1d.explore.CountLikedYouRequest\x1a\x1e.explore.CountLikedYouResponse\x12H\n" +
-	"\vPutDecision\x12\x1b.explore.PutDecisionRequest\x1a\x1c.explore.PutDecisionResponseB+Z)github.com/muzzapp/backend-interview-taskb\x06proto3"
+	"\vPutDecision\x12\x1b.explore.PutDecisionRequest\x1a\x1c.explore.PutDecisionResponseB\x0fZ\rmuzzapp/protob\x06proto3"
 
 var (
 	file_proto_explore_service_proto_rawDescOnce sync.Once

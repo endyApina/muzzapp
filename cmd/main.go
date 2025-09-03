@@ -7,12 +7,12 @@ import (
 
 	"github.com/endyapina/muzzapp/internal/config"
 	"github.com/endyapina/muzzapp/internal/database"
+	"github.com/endyapina/muzzapp/internal/handler"
 	"github.com/endyapina/muzzapp/internal/redis"
 	"github.com/endyapina/muzzapp/internal/repository"
 	"github.com/endyapina/muzzapp/internal/service"
-	"github.com/endyapina/muzzapp/internal/web"
 
-	pb "github.com/endyapina/muzzapp/proto/gen/github.com/muzzapp/backend-interview-task"
+	pb "github.com/endyapina/muzzapp/proto/gen/muzzapp/proto"
 
 	"google.golang.org/grpc"
 )
@@ -37,7 +37,7 @@ func main() {
 		log.Fatal(fmt.Errorf("failed to create database repository: %w", err))
 	}
 	service := service.New(repo, cache)
-	handler := web.NewHandler(service)
+	handler := handler.New(service)
 
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%s", cfg.GRPCPort))
 	if err != nil {

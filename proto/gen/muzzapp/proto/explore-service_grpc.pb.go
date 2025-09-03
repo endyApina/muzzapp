@@ -4,7 +4,7 @@
 // - protoc             v6.32.0
 // source: proto/explore-service.proto
 
-package backend_interview_task
+package proto
 
 import (
 	context "context"

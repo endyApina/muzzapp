@@ -1,10 +1,10 @@
-package web
+package handler
 
 import (
 	"context"
 
 	"github.com/endyapina/muzzapp/internal/service"
-	pb "github.com/endyapina/muzzapp/proto/gen/github.com/muzzapp/backend-interview-task"
+	pb "github.com/endyapina/muzzapp/proto/gen/muzzapp/proto"
 )
 
 type ExploreHandler struct {
@@ -12,7 +12,7 @@ type ExploreHandler struct {
 	pb.UnimplementedExploreServiceServer
 }
 
-func NewHandler(service *service.ExploreService) *ExploreHandler {
+func New(service *service.ExploreService) *ExploreHandler {
 	return &ExploreHandler{service: service}
 }
 

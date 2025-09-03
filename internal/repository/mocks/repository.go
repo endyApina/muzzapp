@@ -5,8 +5,7 @@ package mocks
 import (
 	context "context"
 
-	backend_interview_task "github.com/endyapina/muzzapp/proto/gen/github.com/muzzapp/backend-interview-task"
-
+	proto "github.com/endyapina/muzzapp/proto/gen/muzzapp/proto"
 	mock "github.com/stretchr/testify/mock"
 )
 
@@ -139,24 +138,24 @@ func (_c *Repository_CountLikes_Call) RunAndReturn(run func(context.Context, str
 }
 
 // GetLikers provides a mock function with given fields: ctx, recipientID, paginationToken
-func (_m *Repository) GetLikers(ctx context.Context, recipientID string, paginationToken string) ([]backend_interview_task.ListLikedYouResponse_Liker, string, error) {
+func (_m *Repository) GetLikers(ctx context.Context, recipientID string, paginationToken string) ([]proto.ListLikedYouResponse_Liker, string, error) {
 	ret := _m.Called(ctx, recipientID, paginationToken)
 
 	if len(ret) == 0 {
 		panic("no return value specified for GetLikers")
 	}
 
-	var r0 []backend_interview_task.ListLikedYouResponse_Liker
+	var r0 []proto.ListLikedYouResponse_Liker
 	var r1 string
 	var r2 error
-	if rf, ok := ret.Get(0).(func(context.Context, string, string) ([]backend_interview_task.ListLikedYouResponse_Liker, string, error)); ok {
+	if rf, ok := ret.Get(0).(func(context.Context, string, string) ([]proto.ListLikedYouResponse_Liker, string, error)); ok {
 		return rf(ctx, recipientID, paginationToken)
 	}
-	if rf, ok := ret.Get(0).(func(context.Context, string, string) []backend_interview_task.ListLikedYouResponse_Liker); ok {
+	if rf, ok := ret.Get(0).(func(context.Context, string, string) []proto.ListLikedYouResponse_Liker); ok {
 		r0 = rf(ctx, recipientID, paginationToken)
 	} else {
 		if ret.Get(0) != nil {
-			r0 = ret.Get(0).([]backend_interview_task.ListLikedYouResponse_Liker)
+			r0 = ret.Get(0).([]proto.ListLikedYouResponse_Liker)
 		}
 	}
 
@@ -195,35 +194,35 @@ func (_c *Repository_GetLikers_Call) Run(run func(ctx context.Context, recipient
 	return _c
 }
 
-func (_c *Repository_GetLikers_Call) Return(_a0 []backend_interview_task.ListLikedYouResponse_Liker, _a1 string, _a2 error) *Repository_GetLikers_Call {
+func (_c *Repository_GetLikers_Call) Return(_a0 []proto.ListLikedYouResponse_Liker, _a1 string, _a2 error) *Repository_GetLikers_Call {
 	_c.Call.Return(_a0, _a1, _a2)
 	return _c
 }
 
-func (_c *Repository_GetLikers_Call) RunAndReturn(run func(context.Context, string, string) ([]backend_interview_task.ListLikedYouResponse_Liker, string, error)) *Repository_GetLikers_Call {
+func (_c *Repository_GetLikers_Call) RunAndReturn(run func(context.Context, string, string) ([]proto.ListLikedYouResponse_Liker, string, error)) *Repository_GetLikers_Call {
 	_c.Call.Return(run)
 	return _c
 }
 
 // GetNewLikers provides a mock function with given fields: ctx, recipientID, paginationToken
-func (_m *Repository) GetNewLikers(ctx context.Context, recipientID string, paginationToken string) ([]backend_interview_task.ListLikedYouResponse_Liker, string, error) {
+func (_m *Repository) GetNewLikers(ctx context.Context, recipientID string, paginationToken string) ([]proto.ListLikedYouResponse_Liker, string, error) {
 	ret := _m.Called(ctx, recipientID, paginationToken)
 
 	if len(ret) == 0 {
 		panic("no return value specified for GetNewLikers")
 	}
 
-	var r0 []backend_interview_task.ListLikedYouResponse_Liker
+	var r0 []proto.ListLikedYouResponse_Liker
 	var r1 string
 	var r2 error
-	if rf, ok := ret.Get(0).(func(context.Context, string, string) ([]backend_interview_task.ListLikedYouResponse_Liker, string, error)); ok {
+	if rf, ok := ret.Get(0).(func(context.Context, string, string) ([]proto.ListLikedYouResponse_Liker, string, error)); ok {
 		return rf(ctx, recipientID, paginationToken)
 	}
-	if rf, ok := ret.Get(0).(func(context.Context, string, string) []backend_interview_task.ListLikedYouResponse_Liker); ok {
+	if rf, ok := ret.Get(0).(func(context.Context, string, string) []proto.ListLikedYouResponse_Liker); ok {
 		r0 = rf(ctx, recipientID, paginationToken)
 	} else {
 		if ret.Get(0) != nil {
-			r0 = ret.Get(0).([]backend_interview_task.ListLikedYouResponse_Liker)
+			r0 = ret.Get(0).([]proto.ListLikedYouResponse_Liker)
 		}
 	}
 
@@ -262,12 +261,12 @@ func (_c *Repository_GetNewLikers_Call) Run(run func(ctx context.Context, recipi
 	return _c
 }
 
-func (_c *Repository_GetNewLikers_Call) Return(_a0 []backend_interview_task.ListLikedYouResponse_Liker, _a1 string, _a2 error) *Repository_GetNewLikers_Call {
+func (_c *Repository_GetNewLikers_Call) Return(_a0 []proto.ListLikedYouResponse_Liker, _a1 string, _a2 error) *Repository_GetNewLikers_Call {
 	_c.Call.Return(_a0, _a1, _a2)
 	return _c
 }
 
-func (_c *Repository_GetNewLikers_Call) RunAndReturn(run func(context.Context, string, string) ([]backend_interview_task.ListLikedYouResponse_Liker, string, error)) *Repository_GetNewLikers_Call {
+func (_c *Repository_GetNewLikers_Call) RunAndReturn(run func(context.Context, string, string) ([]proto.ListLikedYouResponse_Liker, string, error)) *Repository_GetNewLikers_Call {
 	_c.Call.Return(run)
 	return _c
 }
